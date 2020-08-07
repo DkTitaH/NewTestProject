@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopularArtistsViewController" customModule="TestTechnology" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="efI-5v-gIp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="PopularArtistsView" customModule="TestTechnology" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVw-Fk-hjB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oie-Ea-xuL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="f6N-jN-9HQ">
+                            <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                        <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwI-5Z-DwP">
+                            <rect key="frame" x="354" y="150" width="52" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="5u3-EC-Ge1"/>
+                                <constraint firstAttribute="height" constant="50" id="rKP-uf-oO0"/>
+                            </constraints>
+                            <connections>
+                                <action selector="switchOnlineMode:" destination="i5M-Pr-FkT" eventType="valueChanged" id="v6x-H2-VXR"/>
+                            </connections>
+                        </switch>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Oie-Ea-xuL" firstAttribute="top" secondItem="aVw-Fk-hjB" secondAttribute="top" id="7AM-Yd-JWW"/>
+                        <constraint firstItem="Oie-Ea-xuL" firstAttribute="leading" secondItem="aVw-Fk-hjB" secondAttribute="leading" id="BqJ-hp-p0e"/>
+                        <constraint firstAttribute="trailing" secondItem="Oie-Ea-xuL" secondAttribute="trailing" id="PVd-yR-MQJ"/>
+                        <constraint firstAttribute="trailing" secondItem="mwI-5Z-DwP" secondAttribute="trailing" constant="10" id="d97-NQ-bkq"/>
+                        <constraint firstAttribute="bottom" secondItem="Oie-Ea-xuL" secondAttribute="bottom" id="dcM-2Q-thr"/>
+                        <constraint firstItem="mwI-5Z-DwP" firstAttribute="top" secondItem="aVw-Fk-hjB" secondAttribute="top" constant="150" id="lnm-qb-G2t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aVw-Fk-hjB" secondAttribute="trailing" id="GBO-RT-mwl"/>
+                <constraint firstItem="aVw-Fk-hjB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GZx-i6-naY"/>
+                <constraint firstItem="aVw-Fk-hjB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RT9-Ny-aUb"/>
+                <constraint firstItem="f6N-jN-9HQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZhZ-8c-9NN"/>
+                <constraint firstAttribute="bottom" secondItem="aVw-Fk-hjB" secondAttribute="bottom" id="v1a-hW-Klj"/>
+                <constraint firstItem="f6N-jN-9HQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vMy-u7-coc"/>
+            </constraints>
+            <connections>
+                <outlet property="artistsTableView" destination="Oie-Ea-xuL" id="TK1-xw-ZmS"/>
+                <outlet property="onlineModeSwitch" destination="mwI-5Z-DwP" id="Zz5-ab-Sud"/>
+                <outlet property="spinnerView" destination="f6N-jN-9HQ" id="hZC-8o-bt6"/>
+            </connections>
+            <point key="canvasLocation" x="43" y="103"/>
+        </view>
+    </objects>
+</document>
